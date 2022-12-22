@@ -7,7 +7,7 @@ def f(x):
     
 interg = lambda x: f(x)
 
-# Fungsi untuk menghitung integrasi dengan Metode Trapezoidal
+# Fungsi yang digunakan untuk menghitung integrasi dengan Metode Trapezoidal
 def trapezoidal(x, y, n):
     h = (y - x) / n
     s = 0.5 * (f(x) + f(y))
@@ -16,13 +16,11 @@ def trapezoidal(x, y, n):
     return h * s
 
 # Menghitung nilai integral dengan metode Trapezoidal dan Integrasi Romberg dan menampilkan hasilnya
-x = 0
-y = 1
-n = 4
+x = 0; y = 1; n = 4
 trapezoidal = trapezoidal(x, y, n)
 romberg = integrate.romberg(interg, x, y, show = True) 
-print("Hasil perhitungan dengan metode Trapezoidal:", trapezoidal)
-print("Hasil perhitungan dengan metode Integrasi Romberg:", romberg)
+print("\nHasil metode Trapezoidal:", trapezoidal)
+print("Hasil metode integrasi Romberg:", romberg)
 
 # Mencari error relatif dan menampilkan hasilnya
 result = 0.3333333333333333  
